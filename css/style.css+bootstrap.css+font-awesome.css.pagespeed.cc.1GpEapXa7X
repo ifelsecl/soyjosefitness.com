@@ -2552,6 +2552,8 @@ div h5, h6{
    background: url("../images/onepage/free-text.png") no-repeat scroll center center  rgba(0, 0, 0, 0);
   text-align: center;
   background-size:100% auto;
+  overflow-y:auto;
+  max-height:900px;
   
 }
 .success {

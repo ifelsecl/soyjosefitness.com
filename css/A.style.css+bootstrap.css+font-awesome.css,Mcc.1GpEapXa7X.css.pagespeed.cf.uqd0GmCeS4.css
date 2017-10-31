@@ -289,7 +289,7 @@
 
 .cd-modal-close {
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   top: 20px;
   right: 5%;
   height: 50px;
@@ -337,6 +337,12 @@
   }
 }
 
+@media only screen and (max-device-width: 480px) {
+  .cd-modal-close {
+    right: 45%;
+    z-index:10;
+  }
+    }
 .plan-info h2 {
   font-size:14pt;
 

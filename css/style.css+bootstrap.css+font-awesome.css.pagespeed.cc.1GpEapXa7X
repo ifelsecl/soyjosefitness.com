@@ -8495,7 +8495,7 @@ display:block;
 	  padding: 25px 30px 10px;
 	}
 	.contact {
-	  top: 105px;
+	  top: 50px;
 	}
 	.sidebar-bottom .title-match {
 	  padding: 9px 0;

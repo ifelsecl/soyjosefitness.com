@@ -245,13 +245,13 @@
   border-radius: 5em;
   color: #ffffff;
   white-space: nowrap;
-  font-weight: 700;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-transition: color 0.2s 0.3s, width 0.3s 0s;
   -moz-transition: color 0.2s 0.3s, width 0.3s 0s;
   transition: color 0.2s 0.3s, width 0.3s 0s;
 }
+
 .cd-modal-action .btn.to-circle {
   width: 4em;
   color: transparent;
@@ -336,3 +336,19 @@
     top: 70px;
   }
 }
+
+.plan-info h2 {
+  font-size:14pt;
+
+}
+
+.plan-info p {
+  font-size:8pt;
+
+}
+
+.plan-info  {
+  margin-top:100px
+
+}
+

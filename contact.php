@@ -6,10 +6,15 @@ $email = $_POST['email'];
 $country = $_POST['country'];
 $plan = $_POST['plan'];
 $payment = $_POST['payment'];
-$p4 = "https://www.paypal.com/webapps/hermes?token=1BT49628VN0648630&useraction=commit&mfid=1509930036425_63a4e01adcbca";
-$p8 = "https://www.paypal.com/webapps/hermes?token=21H24971UP903232E&useraction=commit&mfid=1509930128238_c905f4facbf92";
-$p12 = "https://www.paypal.com/webapps/hermes?token=6DU92031UL636744N&useraction=commit&mfid=1509930249477_2a69f3fcbd3b";
-$url = ""
+$p4 = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZFYC72F8H9YY4";
+$p8 = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZFYC72F8H9YY4";
+$p12 = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZFYC72F8H9YY4";
+$url = "";
+
+if(!isset($body) && !isset($payment)){
+	echo "no valid data.";
+	die();
+}
 
 if($payment == "paypal"){
   if($plan == "4")
@@ -20,8 +25,6 @@ if($payment == "paypal"){
     $url = $p12;
   else{}
 }
-
-$ppres = "";
 
 $msg = "''
 <!DOCTYPE html>
@@ -194,7 +197,7 @@ $msg = "''
                 <!-- Hero Image, Flush : BEGIN -->
                 <tr>
                     <td bgcolor='#ffffff' align='center'>
-                        <img src='images/mailingHead.png' width='600' height='' alt='alt_text' border='0' align='center' style='width: 100%; max-width: 600px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; margin: auto;' class='g-img'>
+                        <img src='http://soyjosefitness.com/images/mailingHead.png' width='600' height='' alt='alt_text' border='0' align='center' style='width: 100%; max-width: 600px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; margin: auto;' class='g-img'>
                     </td>
                 </tr>
                 <!-- Hero Image, Flush : END -->
@@ -205,12 +208,12 @@ $msg = "''
                         <table role='presentation' cellspacing='0' cellpadding='0' border='0' width='100%'>
                             <tr>
                                 <td style='padding: 40px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;'>
-                                    <h1 style='margin: 0 0 10px 0; font-family: sans-serif; font-size: 24px; line-height: 27px; color: #333333; font-weight: normal;'>Una persona quiere contratar un plan!</h1>
+                                    <h1 style='margin: 0 0 10px 0; font-family: sans-serif; font-size: 24px; line-height: 27px; color: #333333; font-weight: normal;'>José, una persona te ha contactado!</h1>
                                     <p style='margin: 0;'>Nombre: ".$name."</p>
                                     <p style='margin: 0;'>Correo: ".$email."</p>
                                     <p style='margin: 0;'>Telf: ".$phone."</p>
                                     <p style='margin: 0;'>País: ".$country."</p>
-                                    <p style='margin: 0;'>Plan: ".$body."</p>
+                                    <p style='margin: 0;'>Mensaje: ".$body."</p>
                                 </td>
                             </tr>
                             <tr>
@@ -439,7 +442,7 @@ $msgToJose = "''
                 <!-- Hero Image, Flush : BEGIN -->
                 <tr>
                     <td bgcolor='#ffffff' align='center'>
-                        <img src='images/mailingHead.png' width='600' height='' alt='alt_text' border='0' align='center' style='width: 100%; max-width: 600px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; margin: auto;' class='g-img'>
+                        <img src='http://soyjosefitness.com/images/mailingHead.png' width='600' height='' alt='alt_text' border='0' align='center' style='width: 100%; max-width: 600px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; margin: auto;' class='g-img'>
                     </td>
                 </tr>
                 <!-- Hero Image, Flush : END -->
@@ -685,7 +688,7 @@ $msgTransferBSF = "''
                 <!-- Hero Image, Flush : BEGIN -->
                 <tr>
                     <td bgcolor='#ffffff' align='center'>
-                        <img src='images/mailingHead.png' width='600' height='' alt='alt_text' border='0' align='center' style='width: 100%; max-width: 600px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; margin: auto;' class='g-img'>
+                        <img src='http://soyjosefitness.com/images/mailingHead.png' width='600' height='' alt='alt_text' border='0' align='center' style='width: 100%; max-width: 600px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; margin: auto;' class='g-img'>
                     </td>
                 </tr>
                 <!-- Hero Image, Flush : END -->
@@ -741,7 +744,7 @@ $msgTransferBSF = "''
                                     <table role='presentation' cellspacing='0' cellpadding='0' border='0' width='100%' style='font-size: 14px;text-align: left;'>
                                         <tr>
                                             <td style='text-align: center; padding: 0 10px;'>
-                                                <img src='images/gallery/t4.jpg' width='200' height='' alt='alt_text' border='0' align='center' style='width: 100%; max-width: 200px; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;'>
+                                                <img src='http://soyjosefitness.com/images/gallery/t4.jpg' width='200' height='' alt='alt_text' border='0' align='center' style='width: 100%; max-width: 200px; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;'>
                                             </td>
                                         </tr>
                                     </table>
@@ -750,7 +753,7 @@ $msgTransferBSF = "''
                                     <table role='presentation' cellspacing='0' cellpadding='0' border='0' width='100%' style='font-size: 14px;text-align: left;'>
                                         <tr>
                                             <td style='text-align: center; padding: 0 10px;'>
-                                                <img src='images/gallery/tt10.jpg' width='200' height='' alt='alt_text' border='0' align='center' style='width: 100%; max-width: 200px; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;'>
+                                                <img src='http://soyjosefitness.com/images/gallery/tt10.jpg' width='200' height='' alt='alt_text' border='0' align='center' style='width: 100%; max-width: 200px; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;'>
                                             </td>
                                         </tr>
                                     </table>
@@ -981,7 +984,7 @@ $msgPaypal= "''
                 <!-- Hero Image, Flush : BEGIN -->
                 <tr>
                     <td bgcolor='#ffffff' align='center'>
-                        <img src='images/mailingHead.png' width='600' height='' alt='alt_text' border='0' align='center' style='width: 100%; max-width: 600px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; margin: auto;' class='g-img'>
+                        <img src='http://soyjosefitness.com/images/mailingHead.png' width='600' height='' alt='alt_text' border='0' align='center' style='width: 100%; max-width: 600px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; margin: auto;' class='g-img'>
                     </td>
                 </tr>
                 <!-- Hero Image, Flush : END -->
@@ -1002,7 +1005,7 @@ $msgPaypal= "''
                                     <table role='presentation' cellspacing='0' cellpadding='0' border='0' align='center' style='margin: auto;'>
                                         <tr>
                                             <td style='border-radius: 3px; background: #ec3642; text-align: center;' class='button-td'>
-                                                <a href='".$paypal."' style='background: #ec3642; border: 15px solid #ec3642; font-family: sans-serif; font-size: 13px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px; font-weight: bold;' class='button-a'>
+                                                <a href='".$url."' style='background: #ec3642; border: 15px solid #ec3642; font-family: sans-serif; font-size: 13px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px; font-weight: bold;' class='button-a'>
                                                     <span style='color:#ffffff;' class='button-link'>&nbsp;&nbsp;&nbsp;&nbsp;Pagar&nbsp;&nbsp;&nbsp;&nbsp;</span>
                                                 </a>
                                             </td>
@@ -1031,7 +1034,7 @@ $msgPaypal= "''
                                     <table role='presentation' cellspacing='0' cellpadding='0' border='0' width='100%' style='font-size: 14px;text-align: left;'>
                                         <tr>
                                             <td style='text-align: center; padding: 0 10px;'>
-                                                <img src='images/gallery/t4.jpg' width='200' height='' alt='alt_text' border='0' align='center' style='width: 100%; max-width: 200px; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;'>
+                                                <img src='http://soyjosefitness.com/images/gallery/t4.jpg' width='200' height='' alt='alt_text' border='0' align='center' style='width: 100%; max-width: 200px; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;'>
                                             </td>
                                         </tr>
                                     </table>
@@ -1040,7 +1043,7 @@ $msgPaypal= "''
                                     <table role='presentation' cellspacing='0' cellpadding='0' border='0' width='100%' style='font-size: 14px;text-align: left;'>
                                         <tr>
                                             <td style='text-align: center; padding: 0 10px;'>
-                                                <img src='images/gallery/tt10.jpg' width='200' height='' alt='alt_text' border='0' align='center' style='width: 100%; max-width: 200px; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;'>
+                                                <img src='http://soyjosefitness.com/images/gallery/tt10.jpg' width='200' height='' alt='alt_text' border='0' align='center' style='width: 100%; max-width: 200px; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;'>
                                             </td>
                                         </tr>
                                     </table>
@@ -1098,7 +1101,7 @@ $msgPaypal= "''
     </center>
 </body>
 </html>
-"'';
+''";
 
 $msgCustomer = "";
 if($payment == "paypal")
@@ -1107,14 +1110,6 @@ elseif($payment == "transferBSF")
   $msgCustomer = $msgTransferBSF;
 elseif($payment == "transferUSD")
   $msgCustomer = $msgTransferBSF;
-// use wordwrap() if lines are longer than 70 characters
-$msg = wordwrap($msg,70);
-
-$headers = "MIME-Version: 1.0" . "\r\n";
-$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-
-// send email
-echo mail("contacto@soyjosefitness.com","Contacto desde soyJoseFitness.com",$msg,$headers);
 
 if($payment != ""){
   $msg = wordwrap($msgToJose,70);
@@ -1123,16 +1118,25 @@ if($payment != ""){
   $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
   // send email
-  echo mail("contacto@soyjosefitness.com"," Nueva Suscripción",$msg,$headers);
-
+  mail("contacto@soyjosefitness.com","Nueva Suscripción",$msg,$headers);
+  //mail("johnprzmz@gmail.com","Nueva Suscrip",$msg,$headers);
+	
   $msg = wordwrap($msgCustomer,70);
 
   $headers = "MIME-Version: 1.0" . "\r\n";
   $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
   // send email
-  echo mail($email," Nueva Suscripción",$msg,$headers);
-}
+  echo mail($email,"Bienvenido.",$msg,$headers);
+ 
+} else{
+	$msg = wordwrap($msg,70);
 
+	$headers = "MIME-Version: 1.0" . "\r\n";
+	$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+
+	// send email
+	echo mail("contacto@soyjosefitness.com","Contacto desde soyJoseFitness.com",$msg,$headers);
+}
 
 ?>

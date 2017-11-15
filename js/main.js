@@ -72,6 +72,7 @@ jQuery(document).ready(function($){
 
 	function closeModal() {
 		var section = $('.cd-section.modal-is-visible');
+		$('.btn-submit').removeAttr("disabled").removeClass('btn-success');
 		section.removeClass('modal-is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
 			animateLayer(section.find('.cd-modal-bg'), 1, false);
 		});

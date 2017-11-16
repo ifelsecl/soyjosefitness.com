@@ -359,3 +359,10 @@
 
 }
 
+
+@media only screen and (max-device-width: 480px) {
+  .ms-layer{
+    display:none !important;
+  }
+
+}
